@@ -1,0 +1,3 @@
+implement shape detecion on image
+then implement video 
+then implement real time image show
