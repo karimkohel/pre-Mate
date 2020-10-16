@@ -3,8 +3,7 @@ import cv2
 def getShape(approx):
     
     pts = len(approx)
-    print(pts)
-
+    
     if pts == 4:
         (x, y, w, h) = cv2.boundingRect(approx)
         ratio = w / float(h)
