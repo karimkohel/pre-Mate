@@ -7,13 +7,16 @@ def getShape(approx):
     if pts == 4:
         (x, y, w, h) = cv2.boundingRect(approx)
         ratio = w / float(h)
-        shape = "square" if ratio >= 0.90 and ratio <= 1.1 else "rectangle"
+        #       square                                                   rectangle
+        shape = "4th Century BC" if ratio >= 0.90 and ratio <= 1.1 else "6th Century BC"
 
     elif pts == 3:
-        shape = "triangle"
+        #       trinagle
+        shape = "3rd Century BC"
 
-    elif 4 < pts < 50:
-        shape = "circle" if pts > 25 else "star"
+    elif 4 < pts < 70:
+        #       circle                              star
+        shape = "2nd Century BC" if pts > 30 else "5th Century BC"
     else:
         shape = "N/A"
 

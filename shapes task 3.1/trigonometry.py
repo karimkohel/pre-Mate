@@ -7,7 +7,7 @@ cap = cv2.VideoCapture(0)
 while True:
     ret, img_color = cap.read()
     img = cv2.cvtColor(img_color, cv2.COLOR_BGR2GRAY)
-    _, thresh = cv2.threshold(img, 230, 255, cv2.THRESH_BINARY)
+    _, thresh = cv2.threshold(img, 200, 255, cv2.THRESH_BINARY)
     inv = cv2.bitwise_not(thresh)
     contours, _ = cv2.findContours(inv, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
