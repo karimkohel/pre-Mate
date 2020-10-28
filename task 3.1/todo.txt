@@ -1,0 +1,4 @@
+implement shape detecion on image
+then implement video 
+then implement real time image show
+limit detection to single square area in the video input
