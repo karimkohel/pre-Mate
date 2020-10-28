@@ -1,6 +1,6 @@
 import cv2
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 
 i = 0
 while(cap.isOpened()):
@@ -10,7 +10,7 @@ while(cap.isOpened()):
         i += 1
         cv2.imwrite(f'frame{i}.jpg',frame)
 
-    elif cv2.waitKey(1) == ord('q'):
+    elif cv2.waitKey(20) == ord('q'):
         break
 
     cv2.imshow("Frame", frame)
